@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ai-tools-productivity",
+    "title": "How I Use AI Tools to Ship Side Projects 3x Faster",
+    "date": "2026-04-15",
+    "summary": "A practical guide to using AI coding assistants, prompt engineering, and automated workflows to accelerate solo development.",
+    "tags": ["AI", "Product"]
+  },
+  {
+    "id": "why-product-thinking",
+    "title": "Why CS Students Should Learn Product Thinking",
+    "date": "2026-03-20",
+    "summary": "The best engineers aren't just coders — they understand users, business models, and how to ship what actually matters.",
+    "tags": ["Product"]
+  },
+  {
+    "id": "react-animation-guide",
+    "title": "Adding Personality to UIs: A Guide to Micro-Interactions",
+    "date": "2026-02-10",
+    "summary": "How small animations and thoughtful transitions can make your web apps feel polished and professional.",
+    "tags": ["Frontend"]
+  },
+  {
+    "id": "data-driven-decisions",
+    "title": "Making Decisions with Data When You're Not a Data Scientist",
+    "date": "2026-01-05",
+    "summary": "Simple frameworks for using data to guide product decisions — no PhD required.",
+    "tags": ["Data", "Product"]
+  }
+]

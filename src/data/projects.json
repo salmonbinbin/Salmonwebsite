@@ -1,0 +1,38 @@
+[
+  {
+    "id": "personal-website",
+    "title": "Personal Website",
+    "tagline": "A Playful Geometric portfolio built with React and Tailwind",
+    "description": "My personal corner of the web showcasing projects, writing, and growth journey. Designed with a playful geometric aesthetic — hard shadows, bouncy animations, and chunky borders.",
+    "tags": ["Frontend", "React", "Tailwind"],
+    "link": "https://github.com/salmon/website",
+    "featured": true
+  },
+  {
+    "id": "data-dashboard",
+    "title": "Campus Data Dashboard",
+    "tagline": "Visualizing student activity data to improve campus services",
+    "description": "Built an interactive dashboard pulling from campus APIs to display real-time library occupancy, dining hall traffic, and event attendance trends.",
+    "tags": ["Data", "React", "AI"],
+    "link": "https://github.com/salmon/dashboard",
+    "featured": true
+  },
+  {
+    "id": "ai-prototype",
+    "title": "AI Course Assistant",
+    "tagline": "LLM-powered study tool that generates flashcards and quizzes from lecture notes",
+    "description": "A prototype that uses GPT to parse lecture PDFs and auto-generate study materials. Built in a weekend to test the idea of AI-assisted learning.",
+    "tags": ["AI", "Product", "Frontend"],
+    "link": "https://github.com/salmon/ai-study",
+    "featured": true
+  },
+  {
+    "id": "content-strategy",
+    "title": "Tech Blog Content Strategy",
+    "tagline": "Growing a technical blog from 0 to 1K monthly readers",
+    "description": "Planned and executed a content strategy for a tech blog — keyword research, editorial calendar, SEO optimization, and distribution across platforms.",
+    "tags": ["Product", "Content"],
+    "link": "",
+    "featured": false
+  }
+]

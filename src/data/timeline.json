@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2024 — Present",
+    "title": "B.S. Computer Science & Technology",
+    "description": "Focused on frontend engineering, product thinking, and AI-assisted development. Building projects that bridge tech and business."
+  },
+  {
+    "date": "2025",
+    "title": "Built First AI-Powered Tool",
+    "description": "Created a course assistant using LLMs to generate study materials. Learned prompt engineering and rapid prototyping."
+  },
+  {
+    "date": "2024",
+    "title": "First Full-Stack Project Launch",
+    "description": "Built and shipped a React + Node.js campus dashboard used by 200+ students. Discovered the joy of making things people actually use."
+  },
+  {
+    "date": "2023",
+    "title": "Wrote My First Line of Code",
+    "description": "Started with HTML and CSS. Fell in love with building things from scratch. The beginning of everything."
+  }
+]
