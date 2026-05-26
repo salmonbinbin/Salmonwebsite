@@ -1,0 +1,112 @@
+<h2>三种设计方向</h2>
+<p class="subtitle">基于你喜欢的 Aura.build / DesignPrompt / MotionSites / ReactBits 风格，结合 B（创意活力）+ D（叙事感），我提炼了三个方向</p>
+
+<div class="cards">
+  <div class="card" data-choice="aurora" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: linear-gradient(135deg, #0A0E27 0%, #1a0a2e 40%, #0a1628 70%, #0a0e27 100%); border-radius: 12px; padding: 32px 24px; position: relative; overflow: hidden; min-height: 200px;">
+        <div style="position: absolute; top: -40%; right: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0, 128, 255, 0.3) 0%, transparent 60%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255, 20, 147, 0.2) 0%, transparent 60%); border-radius: 50%;"></div>
+        <div style="position: relative; z-index: 1;">
+          <div style="color: #FFFFFF; font-size: 28px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px;">SALMON</div>
+          <div style="color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 24px;">Builder &amp; Thinker</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px; color: #60A5FA; font-size: 11px; backdrop-filter: blur(10px);">Projects</div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px; color: #F472B6; font-size: 11px; backdrop-filter: blur(10px);">Writing</div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px; color: #A78BFA; font-size: 11px; backdrop-filter: blur(10px);">About</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Aurora Dark</h3>
+      <p>OLED 深黑底 + 流动极光渐变 + 滚动叙事章节。像 Aura.build 那样有氛围感，但更有故事性。每个章节有不同的色彩氛围，逐层递进。</p>
+      <div style="display: flex; gap: 6px; margin-top: 8px;">
+        <span style="background: #0080FF; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #FF1493; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #A78BFA; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #00FFFF; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="color: #888; font-size: 10px; margin-left: 4px;">极光渐变调色板</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="cyber" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #0D0D0D; border-radius: 12px; padding: 32px 24px; position: relative; overflow: hidden; min-height: 200px; border: 1px solid #1a1a2e;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,255,0.03) 2px, rgba(0,255,255,0.03) 4px); pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;">
+          <div style="color: #00FF00; font-size: 22px; font-family: monospace; margin-bottom: 4px;">&gt; salmon.init()</div>
+          <div style="color: #00FFFF; font-size: 12px; font-family: monospace; margin-bottom: 20px;">Loading skillset...</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="border: 1px solid #FF00FF; color: #FF00FF; padding: 2px 8px; font-size: 10px; font-family: monospace;">REACT</span>
+            <span style="border: 1px solid #00FFFF; color: #00FFFF; padding: 2px 8px; font-size: 10px; font-family: monospace;">PRODUCT</span>
+            <span style="border: 1px solid #00FF00; color: #00FF00; padding: 2px 8px; font-size: 10px; font-family: monospace;">AI</span>
+            <span style="border: 1px solid #FFD700; color: #FFD700; padding: 2px 8px; font-size: 10px; font-family: monospace;">DATA</span>
+          </div>
+          <div style="color: #00FF00; font-size: 12px; font-family: monospace; margin-top: 16px;"><span style="animation: blink 1s infinite;">▌</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Cyber Creative</h3>
+      <p>赛博朋克 + 终端美学 + 故障艺术。用代码界面叙事，展示你的技术底色。霓虹绿、洋红、青色在纯黑底上，配上 Kinetic Typography 动效。</p>
+      <div style="display: flex; gap: 6px; margin-top: 8px;">
+        <span style="background: #00FF00; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #FF00FF; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #00FFFF; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #FFD700; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="color: #888; font-size: 10px; margin-left: 4px;">霓虹暗色调</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="tech" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #0F172A; border-radius: 12px; padding: 32px 24px; position: relative; overflow: hidden; min-height: 200px;">
+        <div style="position: absolute; top: 0; right: 0; width: 180px; height: 180px; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: relative; z-index: 1;">
+          <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;">
+            <div style="width: 36px; height: 4px; background: #6366F1; border-radius: 2px;"></div>
+            <div style="color: #94A3B8; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;">Developer &amp; Creative</div>
+          </div>
+          <div style="color: #F8FAFC; font-size: 30px; font-weight: 700; margin-bottom: 16px; letter-spacing: -1px;">Hi, I'm Salmon</div>
+          <div style="color: #94A3B8; font-size: 13px; line-height: 1.6; margin-bottom: 20px;">I build products at the intersection of code, data, and storytelling.</div>
+          <div style="display: flex; gap: 10px;">
+            <div style="background: #6366F1; color: white; padding: 6px 16px; border-radius: 6px; font-size: 11px; font-weight: 600;">View Work</div>
+            <div style="border: 1px solid #334155; color: #CBD5E1; padding: 6px 16px; border-radius: 6px; font-size: 11px;">Read More</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Tech Minimalist</h3>
+      <p>深蓝暗底 + 微妙渐变 + 排版为王。克制但精致。适合突出内容深度，让项目案例和文字自己说话。适合叙事型长内容。</p>
+      <div style="display: flex; gap: 6px; margin-top: 8px;">
+        <span style="background: #6366F1; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #22C55E; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #F8FAFC; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="background: #0F172A; width: 12px; height: 12px; border-radius: 50%;"></span>
+        <span style="color: #888; font-size: 10px; margin-left: 4px;">代码暗 + 活力绿</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 24px;">我的推荐</h3>
+<p class="subtitle"><strong>A. Aurora Dark</strong> 最符合你的画像。理由：</p>
+
+<div class="pros-cons">
+  <div class="pros"><h4>为什么是 A</h4><ul>
+    <li>极光渐变天然营造「叙事氛围」，每章不同色调推进故事</li>
+    <li>OLED 暗底让创意动效更有视觉冲击力</li>
+    <li>不幼稚也不沉闷 —— 既有 B 的活力又有 D 的深度</li>
+    <li>技术栈友好：CSS gradient + Intersection Observer + Framer Motion 即可实现</li>
+    <li>适合渐进式内容：从「我是谁」到「我做了什么」再到「我能为你做什么」</li>
+  </ul></div>
+  <div class="cons"><h4>需要注意</h4><ul>
+    <li>动效不能过多，避免性能问题和视觉疲劳</li>
+    <li>文字对比度要仔细测试（渐变背景上的文字）</li>
+    <li>移动端需简化动效，降级为纯色背景</li>
+  </ul></div>
+</div>

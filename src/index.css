@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-bg: #FFFDF5;
+  --color-fg: #1E293B;
+  --color-muted: #F1F5F9;
+  --color-muted-fg: #64748B;
+  --color-accent: #6366F1;
+  --color-accent-fg: #FFFFFF;
+  --color-secondary: #EC4899;
+  --color-tertiary: #F59E0B;
+  --color-quaternary: #10B981;
+  --color-border: #E2E8F0;
+  --color-card: #FFFFFF;
+  --color-ring: #6366F1;
+  --color-dark-bg: #0F172A;
+  --color-dark-fg: #F8FAFC;
+  --color-dark-accent: #818CF8;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.shadow-pop {
+  box-shadow: 4px 4px 0px 0px var(--color-fg);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.shadow-pop:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-fg);
+}
+.shadow-pop:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--color-fg);
+}
+
+.shadow-card {
+  box-shadow: 8px 8px 0px 0px var(--color-border);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.shadow-card:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+.shadow-card-pink {
+  box-shadow: 8px 8px 0px 0px var(--color-secondary);
+}
+
+.shadow-card-amber {
+  box-shadow: 8px 8px 0px 0px var(--color-tertiary);
+}
+
+.shadow-card-emerald {
+  box-shadow: 8px 8px 0px 0px var(--color-quaternary);
+}
+
+.input-focus-shadow:focus {
+  border-color: var(--color-accent);
+  box-shadow: 4px 4px 0px 0px var(--color-accent);
+  outline: none;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(var(--color-border) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+.animate-wiggle:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.pop-in {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
