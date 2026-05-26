@@ -1,30 +1,30 @@
 [
   {
     "id": "ai-tools-productivity",
-    "title": "How I Use AI Tools to Ship Side Projects 3x Faster",
+    "title": "我如何用 AI 工具以 3 倍速度交付个人项目",
     "date": "2026-04-15",
-    "summary": "A practical guide to using AI coding assistants, prompt engineering, and automated workflows to accelerate solo development.",
-    "tags": ["AI", "Product"]
+    "summary": "一份实用指南，介绍如何使用 AI 编程助手、提示工程和自动化工作流加速独立开发。",
+    "tags": ["AI", "产品"]
   },
   {
     "id": "why-product-thinking",
-    "title": "Why CS Students Should Learn Product Thinking",
+    "title": "为什么计算机专业学生应该学习产品思维",
     "date": "2026-03-20",
-    "summary": "The best engineers aren't just coders — they understand users, business models, and how to ship what actually matters.",
-    "tags": ["Product"]
+    "summary": "最好的工程师不只是写代码——他们理解用户、商业模式，以及如何交付真正重要的东西。",
+    "tags": ["产品"]
   },
   {
     "id": "react-animation-guide",
-    "title": "Adding Personality to UIs: A Guide to Micro-Interactions",
+    "title": "为界面注入个性：微交互设计指南",
     "date": "2026-02-10",
-    "summary": "How small animations and thoughtful transitions can make your web apps feel polished and professional.",
-    "tags": ["Frontend"]
+    "summary": "如何通过小动画和用心的过渡效果让你的网页应用感觉精致且专业。",
+    "tags": ["前端"]
   },
   {
     "id": "data-driven-decisions",
-    "title": "Making Decisions with Data When You're Not a Data Scientist",
+    "title": "不需要成为数据科学家也能用数据做决策",
     "date": "2026-01-05",
-    "summary": "Simple frameworks for using data to guide product decisions — no PhD required.",
-    "tags": ["Data", "Product"]
+    "summary": "用数据指导产品决策的简单框架——不需要博士学位。",
+    "tags": ["数据", "产品"]
   }
 ]

@@ -1,21 +1,21 @@
 import { useState } from 'react'
 
 const categoryColorMap = {
-  Frontend: 'var(--color-accent)',
-  Backend: 'var(--color-quaternary)',
-  Tech: 'var(--color-secondary)',
-  Data: 'var(--color-tertiary)',
-  Product: 'var(--color-accent)',
-  Content: 'var(--color-quaternary)',
+  '前端': 'var(--color-accent)',
+  '后端': 'var(--color-quaternary)',
+  '技术': 'var(--color-secondary)',
+  '数据': 'var(--color-tertiary)',
+  '产品': 'var(--color-accent)',
+  '内容': 'var(--color-quaternary)',
 }
 
 const categoryBgMap = {
-  Frontend: 'rgba(99,102,241,0.15)',
-  Backend: 'rgba(16,185,129,0.15)',
-  Tech: 'rgba(236,72,153,0.15)',
-  Data: 'rgba(245,158,11,0.15)',
-  Product: 'rgba(99,102,241,0.15)',
-  Content: 'rgba(16,185,129,0.15)',
+  '前端': 'rgba(99,102,241,0.15)',
+  '后端': 'rgba(16,185,129,0.15)',
+  '技术': 'rgba(236,72,153,0.15)',
+  '数据': 'rgba(245,158,11,0.15)',
+  '产品': 'rgba(99,102,241,0.15)',
+  '内容': 'rgba(16,185,129,0.15)',
 }
 
 export default function SkillVisual({ skills }) {

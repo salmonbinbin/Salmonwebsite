@@ -1,37 +1,37 @@
 [
   {
     "id": "personal-website",
-    "title": "Personal Website",
-    "tagline": "A Playful Geometric portfolio built with React and Tailwind",
-    "description": "My personal corner of the web showcasing projects, writing, and growth journey. Designed with a playful geometric aesthetic — hard shadows, bouncy animations, and chunky borders.",
-    "tags": ["Frontend", "React", "Tailwind"],
+    "title": "个人网站",
+    "tagline": "一个用 React 和 Tailwind 构建的 Playful Geometric 风格作品集",
+    "description": "我的个人网络角落，展示项目、文章和成长历程。以有趣的几何美学设计——硬阴影、弹跳动效和粗边框。",
+    "tags": ["前端", "React", "Tailwind"],
     "link": "https://github.com/salmon/website",
     "featured": true
   },
   {
     "id": "data-dashboard",
-    "title": "Campus Data Dashboard",
-    "tagline": "Visualizing student activity data to improve campus services",
-    "description": "Built an interactive dashboard pulling from campus APIs to display real-time library occupancy, dining hall traffic, and event attendance trends.",
-    "tags": ["Data", "React", "AI"],
+    "title": "校园数据看板",
+    "tagline": "可视化学生活动数据以改善校园服务",
+    "description": "构建了一个交互式仪表盘，接入校园 API，实时展示图书馆占用率、食堂流量和活动参与趋势。",
+    "tags": ["数据", "React", "AI"],
     "link": "https://github.com/salmon/dashboard",
     "featured": true
   },
   {
     "id": "ai-prototype",
-    "title": "AI Course Assistant",
-    "tagline": "LLM-powered study tool that generates flashcards and quizzes from lecture notes",
-    "description": "A prototype that uses GPT to parse lecture PDFs and auto-generate study materials. Built in a weekend to test the idea of AI-assisted learning.",
-    "tags": ["AI", "Product", "Frontend"],
+    "title": "AI 课程助手",
+    "tagline": "基于大语言模型的学习工具，从讲义自动生成闪卡和测验",
+    "description": "一个使用 GPT 解析课程 PDF 并自动生成学习材料的原型。花了一个周末验证 AI 辅助学习的想法。",
+    "tags": ["AI", "产品", "前端"],
     "link": "https://github.com/salmon/ai-study",
     "featured": true
   },
   {
     "id": "content-strategy",
-    "title": "Tech Blog Content Strategy",
-    "tagline": "Growing a technical blog from 0 to 1K monthly readers",
-    "description": "Planned and executed a content strategy for a tech blog — keyword research, editorial calendar, SEO optimization, and distribution across platforms.",
-    "tags": ["Product", "Content"],
+    "title": "技术博客内容策略",
+    "tagline": "将一个技术博客从 0 做到月访问量 1000+",
+    "description": "为一个技术博客策划并执行内容策略——关键词研究、编辑日历、SEO 优化及跨平台分发。",
+    "tags": ["产品", "内容"],
     "link": "",
     "featured": false
   }

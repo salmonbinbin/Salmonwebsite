@@ -20,8 +20,8 @@ export default function Writing() {
     <div className="pt-28 pb-10">
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">Writing</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">Thoughts on tech, product, and the craft of building things.</p>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">文章</h1>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">关于技术、产品和构建之道的思考。</p>
         </div>
 
         <div className="max-w-xl mx-auto mb-10 space-y-6">
@@ -29,7 +29,7 @@ export default function Writing() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-fg w-5 h-5" />
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder="搜索文章..."
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="w-full pl-12 pr-4 py-3 bg-card border-2 border-[#CBD5E1] rounded-lg text-fg placeholder-[#94A3B8] input-focus-shadow transition-all"
@@ -57,7 +57,7 @@ export default function Writing() {
             filtered.map(w => <WritingCard key={w.id} article={w} />)
           ) : (
             <div className="text-center py-12 bg-muted rounded-2xl border-2 border-fg border-dashed">
-              <p className="font-heading font-bold text-xl text-muted-fg">No articles found</p>
+              <p className="font-heading font-bold text-xl text-muted-fg">没有找到文章</p>
             </div>
           )}
         </div>

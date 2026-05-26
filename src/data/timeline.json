@@ -1,22 +1,22 @@
 [
   {
     "date": "2024 — Present",
-    "title": "B.S. Computer Science & Technology",
-    "description": "Focused on frontend engineering, product thinking, and AI-assisted development. Building projects that bridge tech and business."
+    "title": "计算机科学与技术 本科在读",
+    "description": "专注于前端工程、产品思维和 AI 辅助开发。构建连接技术与商业的项目。"
   },
   {
     "date": "2025",
-    "title": "Built First AI-Powered Tool",
-    "description": "Created a course assistant using LLMs to generate study materials. Learned prompt engineering and rapid prototyping."
+    "title": "构建第一个 AI 工具",
+    "description": "使用大语言模型创建课程助手，自动生成学习材料。学习了提示工程和快速原型开发。"
   },
   {
     "date": "2024",
-    "title": "First Full-Stack Project Launch",
-    "description": "Built and shipped a React + Node.js campus dashboard used by 200+ students. Discovered the joy of making things people actually use."
+    "title": "第一个全栈项目上线",
+    "description": "构建并发布了一个 React + Node.js 校园看板，服务 200+ 学生。发现了做出人们真正使用的东西的乐趣。"
   },
   {
     "date": "2023",
-    "title": "Wrote My First Line of Code",
-    "description": "Started with HTML and CSS. Fell in love with building things from scratch. The beginning of everything."
+    "title": "写下第一行代码",
+    "description": "从 HTML 和 CSS 开始。爱上了从零构建东西的感觉。一切的开始。"
   }
 ]

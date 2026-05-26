@@ -12,22 +12,22 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop mb-8">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">Nice to meet you</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">很高兴认识你</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg mb-8">
-            Hi, I'm <span className="text-accent">Salmon</span>
+            你好，我是 <span className="text-accent">Salmon</span>
           </h1>
 
           <div className="space-y-5 text-muted-fg text-lg leading-relaxed">
             <p>
-              I'm a Computer Science student who believes the best products are built by people who understand both the <strong className="text-fg">how</strong> and the <strong className="text-fg">why</strong>. I don't want to just write code — I want to understand what makes a product useful, how to measure its impact, and how to tell its story.
+              我是一名计算机科学专业的学生，相信最好的产品是由同时理解<span className="text-fg font-semibold">怎么做</span>和<span className="text-fg font-semibold">为什么做</span>的人构建的。我不想只写代码——我想理解什么让产品有用、如何衡量它的影响、以及如何讲述它的故事。
             </p>
             <p>
-              My sweet spot is the intersection of <span className="text-accent font-semibold">frontend engineering</span>, <span className="text-secondary font-semibold">product thinking</span>, and <span className="text-tertiary font-semibold">content strategy</span>. I use AI tools to prototype fast, data to guide decisions, and writing to clarify my thinking.
+              我的优势在于<span className="text-accent font-semibold">前端工程</span>、<span className="text-secondary font-semibold">产品思维</span>和<span className="text-tertiary font-semibold">内容策略</span>的交叉点。我用 AI 工具快速原型、用数据指导决策、用写作梳理思考。
             </p>
             <p>
-              When I'm not building, you'll find me reading about product design, experimenting with new AI tools, or writing about what I've learned. I'm currently looking for opportunities where I can bring this multi-disciplinary approach to real products.
+              不写代码的时候，我会阅读产品设计相关的书、尝试新的 AI 工具、或者写下我学到的东西。目前正在寻找能将这种跨领域能力带入真实产品的机会。
             </p>
           </div>
         </div>
@@ -36,8 +36,8 @@ export default function About() {
       {/* Skills */}
       <SectionWrapper className="bg-muted border-y-2 border-fg">
         <div className="text-center mb-10 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">Skills & Toolkit</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">Click a category to filter. Not just what I know — how I combine them.</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">技能与工具箱</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">点击分类筛选。不仅是我会什么——更是我如何把它们结合起来。</p>
         </div>
         <SkillVisual skills={skillsData} />
       </SectionWrapper>
@@ -46,8 +46,8 @@ export default function About() {
       <SectionWrapper id="contact">
         <div className="max-w-lg mx-auto">
           <div className="text-center mb-10 space-y-3">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">Get in Touch</h2>
-            <p className="text-muted-fg text-lg">Let's talk about projects, opportunities, or ideas.</p>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">联系我</h2>
+            <p className="text-muted-fg text-lg">聊聊项目、机会或想法。</p>
           </div>
           <ContactForm />
         </div>

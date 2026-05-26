@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import { Hexagon, Menu, X } from 'lucide-react'
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/writing', label: 'Writing' },
-  { to: '/about', label: 'About' },
+  { to: '/', label: '首页' },
+  { to: '/projects', label: '项目' },
+  { to: '/writing', label: '文章' },
+  { to: '/about', label: '关于' },
 ]
 
 export default function Navbar() {
@@ -39,7 +39,7 @@ export default function Navbar() {
             to="/about#contact"
             className="bg-secondary text-white px-5 py-2 rounded-full border-2 border-fg font-bold text-sm shadow-pop flex items-center gap-2"
           >
-            Contact
+            联系
             <span className="text-white/80">→</span>
           </Link>
         </div>

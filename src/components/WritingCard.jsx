@@ -1,9 +1,9 @@
 const tagColors = {
-  Frontend: 'bg-accent/10 text-accent border-accent/30',
-  Product: 'bg-secondary/10 text-secondary border-secondary/30',
-  Data: 'bg-tertiary/10 text-tertiary border-tertiary/30',
-  AI: 'bg-quaternary/10 text-quaternary border-quaternary/30',
-  Content: 'bg-accent/10 text-accent border-accent/30',
+  '前端': 'bg-accent/10 text-accent border-accent/30',
+  '产品': 'bg-secondary/10 text-secondary border-secondary/30',
+  '数据': 'bg-tertiary/10 text-tertiary border-tertiary/30',
+  'AI': 'bg-quaternary/10 text-quaternary border-quaternary/30',
+  '内容': 'bg-accent/10 text-accent border-accent/30',
 }
 
 export default function WritingCard({ article }) {
