@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Sparkles, BarChart3, PenLine, ArrowRight } from 'lucide-react'
+import { Sparkles, BarChart3, PenLine, ArrowRight, Star } from 'lucide-react'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Marquee from '../components/Marquee'
@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -top-5 -right-5 w-14 h-14 bg-tertiary rounded-full border-2 border-fg flex items-center justify-center shadow-pop">
-                <span className="text-fg font-bold text-lg">★</span>
+                <Star className="text-fg w-5 h-5 fill-fg" />
               </div>
             </div>
           </div>
