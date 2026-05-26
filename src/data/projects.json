@@ -2,8 +2,8 @@
   {
     "id": "personal-website",
     "title": "个人网站",
-    "tagline": "一个用 React 和 Tailwind 构建的 Playful Geometric 风格作品集",
-    "description": "我的个人网络角落，展示项目、文章和成长历程。以有趣的几何美学设计——硬阴影、弹跳动效和粗边框。",
+    "tagline": "就你现在看到的这个网站，用 React 和 Tailwind 搭的",
+    "description": "想有个地方放自己的东西——做过的项目、写过的文章、成长的过程。顺便试了下几何风格的设计：硬阴影、粗边框、一点弹跳。",
     "tags": ["前端", "React", "Tailwind"],
     "link": "https://github.com/salmon/website",
     "featured": true
@@ -11,8 +11,8 @@
   {
     "id": "data-dashboard",
     "title": "校园数据看板",
-    "tagline": "可视化学生活动数据以改善校园服务",
-    "description": "构建了一个交互式仪表盘，接入校园 API，实时展示图书馆占用率、食堂流量和活动参与趋势。",
+    "tagline": "把校园数据可视化，帮同学们做选择",
+    "description": "做了一个互动看板，接学校 API，实时显示图书馆人多不多、食堂挤不挤、活动谁在参加。服务了 200+ 同学。",
     "tags": ["数据", "React", "AI"],
     "link": "https://github.com/salmon/dashboard",
     "featured": true
@@ -20,17 +20,17 @@
   {
     "id": "ai-prototype",
     "title": "AI 课程助手",
-    "tagline": "基于大语言模型的学习工具，从讲义自动生成闪卡和测验",
-    "description": "一个使用 GPT 解析课程 PDF 并自动生成学习材料的原型。花了一个周末验证 AI 辅助学习的想法。",
+    "tagline": "用 GPT 把讲义自动变成闪卡和测验题",
+    "description": "花了一个周末做的原型：上传课程 PDF，自动生成学习材料。想验证一下 AI 能不能真的帮到学生复习。",
     "tags": ["AI", "产品", "前端"],
     "link": "https://github.com/salmon/ai-study",
     "featured": true
   },
   {
     "id": "content-strategy",
-    "title": "技术博客内容策略",
-    "tagline": "将一个技术博客从 0 做到月访问量 1000+",
-    "description": "为一个技术博客策划并执行内容策略——关键词研究、编辑日历、SEO 优化及跨平台分发。",
+    "title": "技术博客内容运营",
+    "tagline": "把一个技术博客从零做到月访问量 1000+",
+    "description": "帮一个技术博客做内容规划——关键词研究、排期、SEO 优化、多平台分发。从没人看到有人看，挺有意思的过程。",
     "tags": ["产品", "内容"],
     "link": "",
     "featured": false

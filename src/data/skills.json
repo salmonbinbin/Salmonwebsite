@@ -7,12 +7,12 @@
   { "name": "Python", "category": "后端" },
   { "name": "PostgreSQL", "category": "后端" },
   { "name": "AI/LLM", "category": "技术" },
-  { "name": "Prompt Engineering", "category": "技术" },
-  { "name": "Data Viz", "category": "数据" },
+  { "name": "提示词工程", "category": "技术" },
+  { "name": "数据可视化", "category": "数据" },
   { "name": "Figma", "category": "产品" },
-  { "name": "Product Strategy", "category": "产品" },
-  { "name": "User Research", "category": "产品" },
-  { "name": "Content Strategy", "category": "内容" },
-  { "name": "Technical Writing", "category": "内容" },
+  { "name": "产品策略", "category": "产品" },
+  { "name": "用户研究", "category": "产品" },
+  { "name": "内容策略", "category": "内容" },
+  { "name": "技术写作", "category": "内容" },
   { "name": "SEO", "category": "内容" }
 ]

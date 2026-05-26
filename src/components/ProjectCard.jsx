@@ -31,7 +31,7 @@ export default function ProjectCard({ project, featured = false }) {
         {project.link && (
           <a href={project.link} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:underline mt-2">
-            查看项目 <ExternalLink className="w-3.5 h-3.5" />
+            去看看 <ExternalLink className="w-3.5 h-3.5" />
           </a>
         )}
       </div>

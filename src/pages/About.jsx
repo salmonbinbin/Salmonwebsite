@@ -12,7 +12,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop mb-8">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">很高兴认识你</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">关于我</span>
           </div>
 
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg mb-8">
@@ -21,13 +21,13 @@ export default function About() {
 
           <div className="space-y-5 text-muted-fg text-lg leading-relaxed">
             <p>
-              我是一名计算机科学专业的学生，相信最好的产品是由同时理解<span className="text-fg font-semibold">怎么做</span>和<span className="text-fg font-semibold">为什么做</span>的人构建的。我不想只写代码——我想理解什么让产品有用、如何衡量它的影响、以及如何讲述它的故事。
+              我在读计算机科学。但我一直觉得，只会写代码是不够的——你得理解产品为什么被需要，数据在说什么，以及怎么把事情讲清楚。
             </p>
             <p>
-              我的优势在于<span className="text-accent font-semibold">前端工程</span>、<span className="text-secondary font-semibold">产品思维</span>和<span className="text-tertiary font-semibold">内容策略</span>的交叉点。我用 AI 工具快速原型、用数据指导决策、用写作梳理思考。
+              平时主要写前端（React、TypeScript 这套），也用 AI 工具做原型，写点东西整理思路。做过课程助手、数据看板、这个网站——都不大，但每个都认真做完了。
             </p>
             <p>
-              不写代码的时候，我会阅读产品设计相关的书、尝试新的 AI 工具、或者写下我学到的东西。目前正在寻找能将这种跨领域能力带入真实产品的机会。
+              最近在想怎么把这些能力串起来，做点真正有用的东西。如果你也在想类似的事，可以聊聊。
             </p>
           </div>
         </div>
@@ -36,8 +36,8 @@ export default function About() {
       {/* Skills */}
       <SectionWrapper className="bg-muted border-y-2 border-fg">
         <div className="text-center mb-10 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">技能与工具箱</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">点击分类筛选。不仅是我会什么——更是我如何把它们结合起来。</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我会的东西</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">点一下分类可以筛选。不是罗列工具——是想说这些东西放在一起能做什么。</p>
         </div>
         <SkillVisual skills={skillsData} />
       </SectionWrapper>

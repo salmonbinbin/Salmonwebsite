@@ -17,29 +17,29 @@ export default function ContactForm() {
         <div className="w-20 h-20 bg-quaternary rounded-full border-2 border-fg flex items-center justify-center mx-auto mb-6 shadow-pop">
           <Send className="text-white w-8 h-8" />
         </div>
-        <h3 className="font-heading font-bold text-2xl text-fg mb-2">消息已发送！</h3>
-        <p className="text-muted-fg">感谢联系，我会尽快回复。</p>
+        <h3 className="font-heading font-bold text-2xl text-fg mb-2">收到！</h3>
+        <p className="text-muted-fg">我会尽快回复你。</p>
       </div>
     )
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 bg-card rounded-2xl border-2 border-fg p-8 shadow-card">
-      <Input label="姓名" id="name" type="text" placeholder="你的名字" required />
-      <Input label="邮箱" id="email" type="email" placeholder="you@example.com" required />
+      <Input label="姓名" id="name" type="text" placeholder="怎么称呼你" required />
+      <Input label="邮箱" id="email" type="email" placeholder="你的邮箱地址" required />
       <div className="space-y-2">
         <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wide text-fg">留言</label>
         <textarea
           id="message"
           rows={4}
-          placeholder="说说你的想法..."
+          placeholder="想说什么就说吧"
           className="w-full px-4 py-3 bg-white border-2 border-[#CBD5E1] rounded-lg text-fg placeholder-[#94A3B8] input-focus-shadow transition-all resize-none"
           required
         />
       </div>
       <Button type="submit" size="lg" className="w-full sm:w-auto">
         <Send className="w-5 h-5" />
-        发送消息
+        发送
       </Button>
     </form>
   )

@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl">Salmon</span>
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs">
-              在代码、产品与故事的交叉点创造与思考。
+              一个不只写代码的程序员。
             </p>
           </div>
 

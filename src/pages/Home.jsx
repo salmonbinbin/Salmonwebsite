@@ -16,20 +16,20 @@ const pillars = [
   {
     icon: <Sparkles className="text-white w-7 h-7" />,
     iconBg: 'bg-accent',
-    title: '快速原型',
-    description: '用 React、AI 工具和快速迭代将想法变为可用的 MVP。快速构建，更快学习。',
+    title: '写代码',
+    description: '用 React 和 AI 工具快速把想法做成能跑的原型。写过课程助手、数据看板，做过自己的网站。',
   },
   {
     icon: <BarChart3 className="text-white w-7 h-7" />,
     iconBg: 'bg-secondary',
-    title: '数据与可视化',
-    description: '用数据驱动决策——从交互式仪表盘到分析报告。',
+    title: '看数据',
+    description: '用数据而不是拍脑袋做判断。做过交互式看板，也写过分析报告。',
   },
   {
     icon: <PenLine className="text-white w-7 h-7" />,
     iconBg: 'bg-tertiary',
-    title: '内容与策略',
-    description: '撰写关于技术、产品思维和运营的文章。把复杂想法讲清楚。',
+    title: '写东西',
+    description: '技术、产品、运营都写一点。把复杂的事情说清楚，对我来说是种乐趣。',
   },
 ]
 
@@ -47,31 +47,31 @@ export default function Home() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop">
               <span className="w-2 h-2 bg-quaternary rounded-full" />
-              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">CS 学生 & 创造者</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">不只会写代码</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold leading-[1.08] tracking-tight text-fg">
-              在代码、产品与故事的{' '}
+              我是 Salmon，一个{' '}
               <span className="text-accent underline decoration-tertiary decoration-[5px] underline-offset-[8px]">
-                交汇处
+                不只写代码
               </span>{' '}
-              创造
+              的程序员
             </h1>
 
             <p className="text-lg text-muted-fg max-w-md leading-relaxed">
-              我用代码和 AI 构建产品、可视化数据、讲述有影响力的故事——连接「做什么」与「为什么重要」。
+              我能写前端，也懂一点产品，会用 AI 提效，喜欢把事情想清楚再做。
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/projects">
                 <Button variant="primary" size="lg">
-                  查看作品
+                  看看我做了什么
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/writing">
                 <Button variant="outline" size="lg">
-                  阅读文章
+                  读点东西
                 </Button>
               </Link>
             </div>
@@ -111,8 +111,8 @@ export default function Home() {
       {/* Three Pillars */}
       <SectionWrapper>
         <div className="text-center mb-14 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我做什么</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">三种我为团队带来价值的方式——构建、分析、传达。</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我能做什么</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">技术 + 产品 + 内容，三件事我都沾一点。</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-10 relative">
           <svg className="absolute top-1/2 left-0 w-full h-4 -translate-y-1/2 hidden sm:block -z-10" viewBox="0 0 1200 20">
@@ -134,8 +134,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-dot-grid opacity-40" />
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14 space-y-3">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我的旅程</h2>
-            <p className="text-muted-fg text-lg">从写下第一行代码到构建有意义的作品。</p>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我是怎么走到这里的</h2>
+            <p className="text-muted-fg text-lg">从 Hello World 到做出让别人真的在用的东西。</p>
           </div>
           <Timeline events={timelineData} />
         </div>
@@ -144,8 +144,8 @@ export default function Home() {
       {/* Featured Projects */}
       <SectionWrapper>
         <div className="text-center mb-14 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">精选项目</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">一些我构建的作品，更多在项目页面。</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">做过的东西</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">挑了几个有代表性的，更多在项目页。</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6">
           {featuredProjects.map(p => (
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
         <div className="text-center mt-10">
           <Link to="/projects">
-            <Button variant="outline" size="lg">查看全部项目 →</Button>
+            <Button variant="outline" size="lg">看全部 →</Button>
           </Link>
         </div>
       </SectionWrapper>
@@ -162,12 +162,12 @@ export default function Home() {
       {/* CTA */}
       <SectionWrapper className="border-t-2 border-fg">
         <div className="text-center space-y-6 max-w-2xl mx-auto">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-fg">一起创造</h2>
-          <p className="text-muted-fg text-lg">开放实习、合作和有趣的项目机会。欢迎随时联系。</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-fg">聊一聊</h2>
+          <p className="text-muted-fg text-lg">在找实习，也欢迎聊聊合作或者有意思的想法。</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/about">
               <Button variant="primary" size="lg">
-                联系我
+                给我发邮件
               </Button>
             </Link>
             <a href="mailto:hello@salmon.dev">

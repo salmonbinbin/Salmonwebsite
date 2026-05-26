@@ -15,8 +15,8 @@ export default function Projects() {
     <div className="pt-28 pb-10">
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">项目</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">我构建的作品——从快速原型到完整应用。</p>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">做过的东西</h1>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">一些自己做的项目，有的是快速原型，有的认真做完了。</p>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center mb-12">
@@ -44,7 +44,7 @@ export default function Projects() {
         ) : (
           <div className="text-center py-16 bg-muted rounded-2xl border-2 border-fg border-dashed">
             <p className="font-heading font-bold text-2xl text-muted-fg mb-2">这里还没有内容</p>
-            <p className="text-muted-fg">这个分类下的酷东西正在构建中——回头来看看！</p>
+            <p className="text-muted-fg">还在弄，好了就放上来。</p>
           </div>
         )}
       </SectionWrapper>
