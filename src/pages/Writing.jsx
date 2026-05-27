@@ -20,8 +20,8 @@ export default function Writing() {
     <div className="pt-28 pb-10">
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">写的东西</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">偶尔写点东西，理一理自己的想法。</p>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">输出的内容</h1>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">写公众号、拍短视频、偶尔也写写技术文章。把学到的东西输出出来，是我理清思路的方式。</p>
         </div>
 
         <div className="max-w-xl mx-auto mb-10 space-y-6">

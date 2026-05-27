@@ -1,18 +1,22 @@
 [
   { "name": "React", "category": "前端" },
+  { "name": "Vue", "category": "前端" },
   { "name": "TypeScript", "category": "前端" },
   { "name": "Tailwind", "category": "前端" },
-  { "name": "Next.js", "category": "前端" },
+  { "name": "微信小程序", "category": "前端" },
   { "name": "Node.js", "category": "后端" },
   { "name": "Python", "category": "后端" },
+  { "name": "FastAPI", "category": "后端" },
+  { "name": "Spring Boot", "category": "后端" },
   { "name": "PostgreSQL", "category": "后端" },
   { "name": "AI/LLM", "category": "技术" },
   { "name": "提示词工程", "category": "技术" },
-  { "name": "数据可视化", "category": "数据" },
+  { "name": "数据可视化", "category": "技术" },
   { "name": "Figma", "category": "产品" },
   { "name": "产品策略", "category": "产品" },
   { "name": "用户研究", "category": "产品" },
-  { "name": "内容策略", "category": "内容" },
-  { "name": "技术写作", "category": "内容" },
-  { "name": "SEO", "category": "内容" }
+  { "name": "公众号运营", "category": "内容" },
+  { "name": "短视频创作", "category": "内容" },
+  { "name": "内容策划", "category": "内容" },
+  { "name": "技术写作", "category": "内容" }
 ]

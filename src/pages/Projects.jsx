@@ -16,7 +16,7 @@ export default function Projects() {
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">做过的东西</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">一些自己做的项目，有的是快速原型，有的认真做完了。</p>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">都是真实做过的项目，不是练习。</p>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center mb-12">

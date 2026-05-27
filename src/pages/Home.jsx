@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Sparkles, BarChart3, PenLine, ArrowRight, Star } from 'lucide-react'
+import { Sparkles, BarChart3, PenLine, ArrowRight, Star, Trophy, FolderGit2, FileText, GraduationCap } from 'lucide-react'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Marquee from '../components/Marquee'
@@ -10,27 +10,34 @@ import SectionWrapper from '../components/SectionWrapper'
 import timelineData from '../data/timeline.json'
 import projectsData from '../data/projects.json'
 
-const marqueeKeywords = ['React', 'TypeScript', 'AI', 'Product', 'Data', 'Tailwind', 'Node.js', 'Prototyping', 'Content Strategy', 'Figma', 'Python']
+const marqueeKeywords = ['React', 'Vue', 'Spring Boot', 'FastAPI', '微信小程序', 'TypeScript', 'AI', '产品', '运营', '内容', 'Tailwind', 'Node.js', 'Python']
 
 const pillars = [
   {
     icon: <Sparkles className="text-white w-7 h-7" />,
     iconBg: 'bg-accent',
-    title: '写代码',
-    description: '用 React 和 AI 工具快速把想法做成能跑的原型。写过课程助手、数据看板，做过自己的网站。',
+    title: '做开发',
+    description: '前端 Vue/React 都写，后端 Spring Boot 和 FastAPI 都用，微信小程序也做过。用 AI 工具辅助，一个人能搞定全栈。',
   },
   {
     icon: <BarChart3 className="text-white w-7 h-7" />,
     iconBg: 'bg-secondary',
-    title: '看数据',
-    description: '用数据而不是拍脑袋做判断。做过交互式看板，也写过分析报告。',
+    title: '做运营',
+    description: '在 Elite Journey 做过运营实习，跟过四个冬夏令营的后勤统筹。懂怎么把一件事从策划推到落地。',
   },
   {
     icon: <PenLine className="text-white w-7 h-7" />,
     iconBg: 'bg-tertiary',
-    title: '写东西',
-    description: '技术、产品、运营都写一点。把复杂的事情说清楚，对我来说是种乐趣。',
+    title: '做内容',
+    description: '在朝阳行动项目组写了 10+ 篇公众号推文，拍了短视频，累计阅读过万。会写、会拍、会传播。',
   },
+]
+
+const stats = [
+  { icon: <Trophy className="w-6 h-6" />, value: '3', label: '比赛获奖', color: 'text-tertiary' },
+  { icon: <FolderGit2 className="w-6 h-6" />, value: '4+', label: '完整项目', color: 'text-accent' },
+  { icon: <FileText className="w-6 h-6" />, value: '10+', label: '公众号推文', color: 'text-secondary' },
+  { icon: <GraduationCap className="w-6 h-6" />, value: '4', label: '夏校经历', color: 'text-quaternary' },
 ]
 
 const shadowColors = ['shadow-card-pink', 'shadow-card-amber', 'shadow-card-emerald']
@@ -43,11 +50,11 @@ export default function Home() {
       {/* Hero */}
       <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
         <BackgroundDecorations variant="hero" />
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+          <div className="md:col-span-3 space-y-6">
             <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop">
-              <span className="w-2 h-2 bg-quaternary rounded-full" />
-              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">不只会写代码</span>
+              <span className="w-2 h-2 bg-quaternary rounded-full animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">大三 / 计算机科学 / 不只写代码</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold leading-[1.08] tracking-tight text-fg">
@@ -55,11 +62,11 @@ export default function Home() {
               <span className="text-accent underline decoration-tertiary decoration-[5px] underline-offset-[8px]">
                 不只写代码
               </span>{' '}
-              的程序员
+              的 builder
             </h1>
 
-            <p className="text-lg text-muted-fg max-w-md leading-relaxed">
-              我能写前端，也懂一点产品，会用 AI 提效，喜欢把事情想清楚再做。
+            <p className="text-lg text-muted-fg max-w-lg leading-relaxed">
+              能写前端，也能写后端；做过产品，也做过运营。喜欢在技术和业务中间那座桥上跑来跑去——把需求翻译成方案，把想法落地成东西。
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -77,7 +84,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden md:block">
+          <div className="relative hidden md:block md:col-span-2">
             <div className="absolute inset-0 bg-dot-grid opacity-50 -z-10 rotate-3 rounded-2xl" />
             <div className="bg-card p-4 rounded-3xl border-2 border-fg shadow-card relative z-10" style={{ borderRadius: '24px 24px 24px 0' }}>
               <div className="bg-muted rounded-2xl p-8 space-y-5">
@@ -105,6 +112,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Strip */}
+      <section className="py-10 bg-muted border-y-2 border-fg">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center space-y-1">
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-fg bg-card shadow-pop ${s.color}`}>
+                  {s.icon}
+                </div>
+                <div className="font-heading font-extrabold text-3xl text-fg">{s.value}</div>
+                <div className="text-muted-fg text-sm">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Marquee */}
       <Marquee items={marqueeKeywords} />
 
@@ -112,7 +136,7 @@ export default function Home() {
       <SectionWrapper>
         <div className="text-center mb-14 space-y-3">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我能做什么</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">技术 + 产品 + 内容，三件事我都沾一点。</p>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">开发、运营、内容——三件事我都做，而且喜欢把它们串起来。</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-10 relative">
           <svg className="absolute top-1/2 left-0 w-full h-4 -translate-y-1/2 hidden sm:block -z-10" viewBox="0 0 1200 20">
@@ -135,7 +159,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14 space-y-3">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我是怎么走到这里的</h2>
-            <p className="text-muted-fg text-lg">从 Hello World 到做出让别人真的在用的东西。</p>
+            <p className="text-muted-fg text-lg">从第一行代码，到做出有人用的东西。</p>
           </div>
           <Timeline events={timelineData} />
         </div>
@@ -145,7 +169,7 @@ export default function Home() {
       <SectionWrapper>
         <div className="text-center mb-14 space-y-3">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">做过的东西</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">挑了几个有代表性的，更多在项目页。</p>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">几个拿过奖的项目，还有更多在项目页。</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6">
           {featuredProjects.map(p => (
@@ -163,7 +187,7 @@ export default function Home() {
       <SectionWrapper className="border-t-2 border-fg">
         <div className="text-center space-y-6 max-w-2xl mx-auto">
           <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-fg">聊一聊</h2>
-          <p className="text-muted-fg text-lg">在找实习，也欢迎聊聊合作或者有意思的想法。</p>
+          <p className="text-muted-fg text-lg">在找实习，也欢迎聊聊合作或者有意思的想法。不一定非得是技术岗——运营、产品、内容相关的也可以。</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/about">
               <Button variant="primary" size="lg">

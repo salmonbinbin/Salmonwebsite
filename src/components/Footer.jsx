@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl">Salmon</span>
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs">
-              一个不只写代码的程序员。
+              写代码，也做运营和内容。在技术和业务中间搭桥的人。
             </p>
           </div>
 
@@ -32,14 +32,13 @@ export default function Footer() {
             <h4 className="font-heading font-bold mb-4 text-secondary text-sm uppercase tracking-wide">联系</h4>
             <ul className="space-y-2 text-[#94A3B8] text-sm">
               <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
               <li><a href="mailto:hello@salmon.dev" className="hover:text-white transition-colors">hello@salmon.dev</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[#94A3B8] text-xs">&copy; {new Date().getFullYear()} Salmon. 用硬阴影与爱构建。</p>
+          <p className="text-[#94A3B8] text-xs">&copy; {new Date().getFullYear()} Salmon. 用心构建。</p>
         </div>
       </div>
     </footer>
