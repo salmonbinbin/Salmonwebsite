@@ -6,6 +6,7 @@ const links = [
   { to: '/', label: '首页' },
   { to: '/projects', label: '项目' },
   { to: '/writing', label: '文章' },
+  { to: '/gallery', label: '照片墙' },
   { to: '/about', label: '关于' },
 ]
 
