@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const tagColors = {
   '前端': 'bg-accent/10 text-accent border-accent/30',
   '产品': 'bg-secondary/10 text-secondary border-secondary/30',
@@ -8,7 +10,7 @@ const tagColors = {
 
 export default function WritingCard({ article }) {
   return (
-    <article className="bg-card rounded-2xl border-2 border-fg p-6 shadow-card group cursor-pointer flex flex-col sm:flex-row gap-5">
+    <Link to={`/writing/${article.id}`} className="bg-card rounded-2xl border-2 border-fg p-6 shadow-card group cursor-pointer flex flex-col sm:flex-row gap-5 hover:-translate-y-0.5 transition-transform">
       <time className="text-xs font-bold uppercase tracking-widest text-accent whitespace-nowrap mt-0.5">
         {article.date}
       </time>
@@ -25,6 +27,6 @@ export default function WritingCard({ article }) {
           ))}
         </div>
       </div>
-    </article>
+    </Link>
   )
 }

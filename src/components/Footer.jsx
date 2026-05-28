@@ -32,7 +32,7 @@ export default function Footer() {
             <h4 className="font-heading font-bold mb-4 text-secondary text-sm uppercase tracking-wide">联系</h4>
             <ul className="space-y-2 text-[#94A3B8] text-sm">
               <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
-              <li><a href="mailto:hello@salmon.dev" className="hover:text-white transition-colors">hello@salmon.dev</a></li>
+              <li><a href="mailto:2186185477@qq.com" className="hover:text-white transition-colors">2186185477@qq.com</a></li>
             </ul>
           </div>
         </div>

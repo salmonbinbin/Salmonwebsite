@@ -1,10 +1,31 @@
-import { Sparkles, MapPin } from 'lucide-react'
+import { useState } from 'react'
+import { Sparkles, MapPin, Mail, Copy, Check, MessageCircle, Video } from 'lucide-react'
 import SectionWrapper from '../components/SectionWrapper'
 import SkillVisual from '../components/SkillVisual'
-import ContactForm from '../components/ContactForm'
 import skillsData from '../data/skills.json'
 
+const EMAIL = '2186185477@qq.com'
+
 export default function About() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      const ta = document.createElement('textarea')
+      ta.value = EMAIL
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
   return (
     <div className="pt-28 pb-10">
       {/* Bio */}
@@ -52,12 +73,90 @@ export default function About() {
 
       {/* Contact */}
       <SectionWrapper id="contact">
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10 space-y-3">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">联系我</h2>
             <p className="text-muted-fg text-lg">聊聊项目、合作或者有意思的想法。</p>
           </div>
-          <ContactForm />
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {/* Email */}
+            <div className="bg-card rounded-2xl border-2 border-fg p-6 shadow-card">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 border-2 border-accent/30 flex items-center justify-center mb-4">
+                <Mail className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="font-heading font-bold text-lg text-fg mb-1">邮箱</h3>
+              <p className="text-sm text-muted-fg mb-4 truncate">{EMAIL}</p>
+              <div className="flex gap-2">
+                <a
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent('来自网站的联系')}`}
+                  className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-accent text-white rounded-xl border-2 border-fg font-bold text-sm shadow-pop hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_var(--color-fg)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_var(--color-fg)] transition-all"
+                >
+                  <Mail className="w-4 h-4" />
+                  发邮件
+                </a>
+                <button
+                  onClick={handleCopy}
+                  className="flex items-center justify-center gap-1.5 px-3 py-2 bg-card text-fg rounded-xl border-2 border-fg font-bold text-sm shadow-pop hover:bg-muted transition-colors"
+                >
+                  {copied ? <Check className="w-4 h-4 text-quaternary" /> : <Copy className="w-4 h-4" />}
+                  {copied ? '已复制' : '复制'}
+                </button>
+              </div>
+            </div>
+
+            {/* WeChat */}
+            <div className="bg-card rounded-2xl border-2 border-fg p-6 shadow-card">
+              <div className="w-12 h-12 rounded-xl bg-quaternary/10 border-2 border-quaternary/30 flex items-center justify-center mb-4">
+                <MessageCircle className="w-6 h-6 text-quaternary" />
+              </div>
+              <h3 className="font-heading font-bold text-lg text-fg mb-1">微信</h3>
+              <p className="text-sm text-muted-fg mb-4">扫码添加好友</p>
+              <div className="bg-muted rounded-xl border-2 border-border overflow-hidden">
+                <img
+                  src="/contact/wechat-qr.png"
+                  alt="微信二维码"
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                    e.target.nextSibling.style.display = 'flex'
+                  }}
+                />
+                <div className="hidden flex-col items-center justify-center py-8 text-muted-fg">
+                  <MessageCircle className="w-6 h-6 mb-2 opacity-40" />
+                  <p className="text-xs">二维码待添加</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Douyin */}
+            <div className="bg-card rounded-2xl border-2 border-fg p-6 shadow-card sm:col-span-2">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 border-2 border-secondary/30 flex items-center justify-center shrink-0">
+                  <Video className="w-6 h-6 text-secondary" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="font-heading font-bold text-lg text-fg mb-1">抖音</h3>
+                  <p className="text-sm text-muted-fg">关注我的抖音</p>
+                </div>
+              </div>
+              <div className="mt-4 bg-muted rounded-xl border-2 border-border overflow-hidden max-w-xs">
+                <img
+                  src="/contact/douyin-qr.png"
+                  alt="抖音二维码"
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                    e.target.nextSibling.style.display = 'flex'
+                  }}
+                />
+                <div className="hidden flex-col items-center justify-center py-8 text-muted-fg">
+                  <Video className="w-6 h-6 mb-2 opacity-40" />
+                  <p className="text-xs">二维码待添加</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </SectionWrapper>
     </div>
