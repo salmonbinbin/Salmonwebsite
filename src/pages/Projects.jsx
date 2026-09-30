@@ -15,8 +15,8 @@ export default function Projects() {
     <div className="pt-28 pb-10">
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">做过的东西</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">从需求、设计到实现，看看这些项目是怎样做出来的。</p>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">项目案例</h1>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">每个项目都按目标、职责和关键实现整理，方便快速了解我做了什么。</p>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center mb-12">
@@ -30,7 +30,7 @@ export default function Projects() {
                   : 'bg-card text-fg hover:bg-muted shadow-pop'
               }`}
             >
-              {tag}
+              {tag === 'All' ? '全部' : tag}
             </button>
           ))}
         </div>

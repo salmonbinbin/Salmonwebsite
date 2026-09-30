@@ -43,6 +43,7 @@ export default function ProjectCard({ project, featured = false }) {
             )}
           </div>
           <p className="text-muted-fg text-sm leading-relaxed">{project.summary}</p>
+          <p className="text-xs font-bold text-fg">我的职责 · {project.role}</p>
           <div className="flex flex-wrap gap-2">
             {project.tags.map(tag => (
               <span key={tag} className={`text-xs font-semibold px-3 py-1 rounded-full border ${tagColors[tag] || 'bg-muted text-muted-fg border-border'}`}>

@@ -9,36 +9,38 @@ import BackgroundDecorations from '../components/BackgroundDecorations'
 import SectionWrapper from '../components/SectionWrapper'
 import timelineData from '../data/timeline.json'
 import projectsData from '../data/projects.json'
+import writingsData from '../data/writings.json'
+import galleryData from '../data/gallery.json'
 import { EMAIL } from '../data/contact'
 
-const marqueeKeywords = ['React', 'Vue', 'Spring Boot', 'FastAPI', '微信小程序', 'TypeScript', 'AI', '产品', '运营', '内容', 'Tailwind', 'Node.js', 'Python']
+const marqueeKeywords = ['需求梳理', '产品设计', '前端开发', '后端实现', 'AI 应用', '运营执行', '内容表达']
 
 const pillars = [
   {
     icon: <Sparkles className="text-white w-7 h-7" />,
     iconBg: 'bg-accent',
-    title: '做开发',
-    description: '前端 Vue/React 都写，后端 Spring Boot 和 FastAPI 都用，微信小程序也做过。用 AI 工具辅助，一个人能搞定全栈。',
+    title: '把方案做出来',
+    description: '在校园 AI 助手、健康管理等项目中参与前后端实现，能把产品想法拆成具体功能。',
   },
   {
     icon: <BarChart3 className="text-white w-7 h-7" />,
     iconBg: 'bg-secondary',
-    title: '做运营',
-    description: '在 Elite Journey 做过运营实习，跟过四个冬夏令营的后勤统筹。懂怎么把一件事从策划推到落地。',
+    title: '把事情推进去',
+    description: '在市场部参与文案与活动执行，也在冬夏令营现场做过后勤协作，理解方案落地时的沟通与协调。',
   },
   {
     icon: <PenLine className="text-white w-7 h-7" />,
     iconBg: 'bg-tertiary',
-    title: '做内容',
-    description: '在朝阳行动项目组写了 10+ 篇公众号推文，拍了短视频，累计阅读过万。会写、会拍、会传播。',
+    title: '把过程讲清楚',
+    description: '参与公众号推文与短视频内容制作，习惯用清楚的文字、图片和演示介绍做过的事。',
   },
 ]
 
 const stats = [
-  { icon: <Trophy className="w-6 h-6" />, value: '3', label: '比赛获奖', color: 'text-tertiary' },
-  { icon: <FolderGit2 className="w-6 h-6" />, value: '4+', label: '完整项目', color: 'text-accent' },
-  { icon: <FileText className="w-6 h-6" />, value: '10+', label: '公众号推文', color: 'text-secondary' },
-  { icon: <GraduationCap className="w-6 h-6" />, value: '4', label: '冬夏令营', color: 'text-quaternary' },
+  { icon: <Trophy className="w-6 h-6" />, value: projectsData.filter(project => project.award).length, label: '获奖项目', color: 'text-tertiary' },
+  { icon: <FolderGit2 className="w-6 h-6" />, value: projectsData.length, label: '项目案例', color: 'text-accent' },
+  { icon: <FileText className="w-6 h-6" />, value: writingsData.length, label: '文章记录', color: 'text-secondary' },
+  { icon: <GraduationCap className="w-6 h-6" />, value: galleryData.length, label: '活动记录', color: 'text-quaternary' },
 ]
 
 const shadowColors = ['shadow-card-pink', 'shadow-card-amber', 'shadow-card-emerald']
@@ -55,31 +57,30 @@ export default function Home() {
           <div className="md:col-span-3 space-y-6">
             <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop">
               <span className="w-2 h-2 bg-quaternary rounded-full animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">大三 / 计算机科学 / 不只写代码</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">计算机专业在读 · 产品与开发</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold leading-[1.08] tracking-tight text-fg">
-              我是 Salmon，一个{' '}
-              <span className="text-accent underline decoration-tertiary decoration-[5px] underline-offset-[8px]">
-                不只写代码
-              </span>{' '}
-              的 builder
+              我是 Salmon，
+              <span className="block text-accent underline decoration-tertiary decoration-[5px] underline-offset-[8px]">
+                把想法做成作品
+              </span>
             </h1>
 
             <p className="text-lg text-muted-fg max-w-lg leading-relaxed">
-              能写前端，也能写后端；做过产品，也做过运营。喜欢在技术和业务中间那座桥上跑来跑去——把需求翻译成方案，把想法落地成东西。
+              从校园 AI 助手到本地美食网站，我喜欢先弄清需求，再参与设计与开发。市场运营和冬夏令营的经历，也让我学会在真实现场推进事情。
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/projects">
                 <Button variant="primary" size="lg">
-                  看看我做了什么
+                  看项目案例
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/writing">
+              <Link to="/about">
                 <Button variant="outline" size="lg">
-                  读点东西
+                  了解我
                 </Button>
               </Link>
             </div>
@@ -112,6 +113,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <SectionWrapper>
+        <div className="text-center mb-14 space-y-3">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">精选项目</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">先看作品，再了解我如何把需求变成具体功能。</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {featuredProjects.map(p => (
+            <ProjectCard key={p.id} project={p} featured={p.id === 'ai-xiaoshang'} />
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link to="/projects">
+            <Button variant="outline" size="lg">看全部项目 →</Button>
+          </Link>
+        </div>
+      </SectionWrapper>
+
       {/* Stats Strip */}
       <section className="py-10 bg-muted border-y-2 border-fg">
         <div className="max-w-4xl mx-auto px-6">
@@ -135,8 +154,8 @@ export default function Home() {
       {/* Three Pillars */}
       <SectionWrapper>
         <div className="text-center mb-14 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我能做什么</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">开发、运营、内容——三件事我都做，而且喜欢把它们串起来。</p>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我怎样做事</h2>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">做出功能，推进协作，也把过程讲清楚。</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-10 relative">
           <svg className="absolute top-1/2 left-0 w-full h-4 -translate-y-1/2 hidden sm:block -z-10" viewBox="0 0 1200 20">
@@ -159,42 +178,22 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-14 space-y-3">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">我是怎么走到这里的</h2>
-            <p className="text-muted-fg text-lg">从第一行代码，到做出有人用的东西。</p>
+            <p className="text-muted-fg text-lg">项目、运营与志愿服务中的几段实践。</p>
           </div>
           <Timeline events={timelineData} />
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <SectionWrapper>
-        <div className="text-center mb-14 space-y-3">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">做过的东西</h2>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">几个拿过奖的项目，还有更多在项目页。</p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {featuredProjects.map(p => (
-            <ProjectCard key={p.id} project={p} featured={p.featured} />
-          ))}
-        </div>
-        <div className="text-center mt-10">
-          <Link to="/projects">
-            <Button variant="outline" size="lg">看全部 →</Button>
-          </Link>
-        </div>
-      </SectionWrapper>
-
       {/* CTA */}
       <SectionWrapper className="border-t-2 border-fg">
         <div className="text-center space-y-6 max-w-2xl mx-auto">
           <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-fg">聊一聊</h2>
-          <p className="text-muted-fg text-lg">在找实习，也欢迎聊聊合作或者有意思的想法。不一定非得是技术岗——运营、产品、内容相关的也可以。</p>
+          <p className="text-muted-fg text-lg">正在寻找能结合产品思考与技术实践的机会，也欢迎交流项目、内容和合作想法。</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button as="a" href={`mailto:${EMAIL}`} variant="primary" size="lg">
               给我发邮件
             </Button>
-            <Button as="a" href={`mailto:${EMAIL}`} variant="secondary" size="lg" className="!bg-fg shadow-[6px_6px_0px_0px_var(--color-secondary)] hover:shadow-[8px_8px_0px_0px_var(--color-secondary)]">
-              {EMAIL}
-            </Button>
+            <span className="self-center text-muted-fg">或联系 <a href={`mailto:${EMAIL}`} className="font-semibold text-accent hover:underline">{EMAIL}</a></span>
           </div>
         </div>
       </SectionWrapper>

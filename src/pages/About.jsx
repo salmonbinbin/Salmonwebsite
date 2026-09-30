@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Sparkles, MapPin, Mail, Copy, Check, MessageCircle, Video } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Sparkles, MapPin, Mail, Copy, Check, MessageCircle, Video, ArrowUpRight } from 'lucide-react'
 import SectionWrapper from '../components/SectionWrapper'
 import SkillVisual from '../components/SkillVisual'
 import skillsData from '../data/skills.json'
@@ -29,32 +30,56 @@ export default function About() {
     <div className="pt-28 pb-10">
       {/* Bio */}
       <SectionWrapper>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border-2 border-fg shadow-pop mb-8">
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-muted-fg">关于我</span>
           </div>
 
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg mb-10">
-            你好，我是 <span className="text-accent">Salmon</span>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg mb-6">
+            你好，我是 <span className="text-accent">Salmon</span>。
           </h1>
 
-          <div className="space-y-6 text-muted-fg text-lg leading-relaxed">
-            <p>
-              我是计算机科学与技术专业的大三学生。写代码算是我的工具箱里最顺手的一把，但不是唯一一把。
-            </p>
-            <p>
-              做过四个完整的项目：用 AI 帮小商户做经营决策（拿了科大讯飞杯一等奖），给校园做健康管理系统（在大湾区计算机创新大赛拿了优秀奖），为新会做本地美食文化探索平台（拿了校级网页设计大赛一等奖），还帮学长学姐用 Spring Boot + Vue 的技术栈做了好几个毕业设计。前端、后端、产品设计——哪个缺人就顶哪个，反正用 AI 工具辅助学起来也快。
-            </p>
-            <p>
-              但我跟大多数 CS 同学不太一样的地方是：我还做过运营。在 Elite Journey 市场部实习过，在 CSSC 跟了四个冬夏令营做后勤统筹，在朝阳行动项目组当了两年执行骨干。写推文、拍视频、做策划、盯现场——这些让我明白一件事：技术很重要，但技术之外的东西——沟通、统筹、把事情想清楚再动手——才是让一件事真的做成的关键。
-            </p>
-            <p>
-              现在在找一个能同时用到技术、产品和运营能力的岗位。不挑城市，不挑公司大小，想跟有意思的人一起做有意思的事。
-            </p>
+          <div className="max-w-3xl space-y-4 text-muted-fg text-lg leading-relaxed">
+            <p>广州商学院计算机科学与技术专业在读。我做网站与 AI 应用，也参与过市场运营和冬夏令营的现场执行。对我来说，先把问题说清楚，再把方案做出来，同样重要。</p>
+            <p>目前关注产品与技术结合的机会，希望继续练习需求梳理、方案沟通和开发落地。</p>
           </div>
 
-          <div className="flex items-center gap-2 mt-8 text-sm text-muted-fg">
+          <div className="grid md:grid-cols-3 gap-5 mt-10">
+            {[
+              {
+                title: '从需求到作品',
+                description: '校园 AI 助手、健康管理系统和本地美食网站，分别记录了我处理不同场景需求的方法。',
+                to: '/projects',
+                label: '看项目案例',
+                color: 'bg-accent/10',
+              },
+              {
+                title: '从方案到现场',
+                description: '在 Elite Journey 参与文案与活动执行，在 CSSC 冬夏令营参与后勤和助教协作。',
+                to: '/gallery',
+                label: '看活动记录',
+                color: 'bg-tertiary/15',
+              },
+              {
+                title: '从经历到表达',
+                description: '在朝阳行动参与推文与短视频制作，也把开发和运营中的思考整理成文章。',
+                to: '/writing',
+                label: '读我的文章',
+                color: 'bg-secondary/10',
+              },
+            ].map(item => (
+              <div key={item.title} className={`${item.color} border-2 border-fg rounded-2xl p-6 shadow-card flex flex-col`}>
+                <h2 className="font-heading font-extrabold text-xl text-fg mb-3">{item.title}</h2>
+                <p className="text-muted-fg text-sm leading-relaxed flex-1">{item.description}</p>
+                <Link to={item.to} className="inline-flex items-center gap-1 text-accent font-bold text-sm mt-6 hover:underline">
+                  {item.label} <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2 mt-9 text-sm text-muted-fg">
             <MapPin className="w-4 h-4" />
             <span>广东 · 新会</span>
           </div>

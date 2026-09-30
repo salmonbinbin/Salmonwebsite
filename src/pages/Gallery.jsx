@@ -29,7 +29,7 @@ export default function Gallery() {
           className="inline-flex items-center gap-2 bg-quaternary/10 text-quaternary border-2 border-quaternary/30 px-4 py-1.5 rounded-full text-sm font-bold mb-6"
         >
           <Camera className="w-4 h-4" />
-          记录每一刻
+          现场记录
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export default function Gallery() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-muted-fg text-lg max-w-2xl mx-auto"
         >
-          记录每一段值得回味的经历
+          冬夏令营与志愿服务中的协作现场，留在照片和文字里。
         </motion.p>
       </div>
 
@@ -96,7 +96,7 @@ export default function Gallery() {
                       {activity.summary}
                     </p>
                     <div className="inline-flex items-center gap-2 text-accent font-bold text-sm">
-                      查看完整故事
+                      看照片与记录
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>

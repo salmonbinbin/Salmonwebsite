@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl">Salmon</span>
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed max-w-xs">
-              写代码，也做运营和内容。在技术和业务中间搭桥的人。
+              从需求梳理到功能实现，也记录运营与现场实践。
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-[#94A3B8] text-sm">
               <li><Link to="/" className="hover:text-white transition-colors">首页</Link></li>
               <li><Link to="/projects" className="hover:text-white transition-colors">项目</Link></li>
-              <li><Link to="/writing" className="hover:text-white transition-colors">文章</Link></li>
+              <li><Link to="/writing" className="hover:text-white transition-colors">笔记</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">关于</Link></li>
             </ul>
           </div>

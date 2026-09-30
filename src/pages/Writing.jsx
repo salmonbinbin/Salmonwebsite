@@ -20,8 +20,8 @@ export default function Writing() {
     <div className="pt-28 pb-10">
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">输出的内容</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">写公众号、拍短视频、偶尔也写写技术文章。把学到的东西输出出来，是我理清思路的方式。</p>
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">实践笔记</h1>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">记录我在项目开发、市场运营和内容制作中的做法与复盘。</p>
         </div>
 
         <div className="max-w-xl mx-auto mb-10 space-y-6">
@@ -29,7 +29,8 @@ export default function Writing() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-fg w-5 h-5" />
             <input
               type="text"
-              placeholder="搜一下..."
+              placeholder="搜索文章标题"
+              aria-label="搜索文章标题"
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="w-full pl-12 pr-4 py-3 bg-card border-2 border-[#CBD5E1] rounded-lg text-fg placeholder-[#94A3B8] input-focus-shadow transition-all"
@@ -46,7 +47,7 @@ export default function Writing() {
                     : 'bg-card text-fg hover:bg-muted shadow-pop'
                 }`}
               >
-                {tag}
+                {tag === 'All' ? '全部' : tag}
               </button>
             ))}
           </div>
