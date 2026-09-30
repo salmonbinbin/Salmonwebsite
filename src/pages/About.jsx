@@ -3,8 +3,7 @@ import { Sparkles, MapPin, Mail, Copy, Check, MessageCircle, Video } from 'lucid
 import SectionWrapper from '../components/SectionWrapper'
 import SkillVisual from '../components/SkillVisual'
 import skillsData from '../data/skills.json'
-
-const EMAIL = '2186185477@qq.com'
+import { EMAIL } from '../data/contact'
 
 export default function About() {
   const [copied, setCopied] = useState(false)

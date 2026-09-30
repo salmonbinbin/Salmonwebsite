@@ -16,7 +16,7 @@ export default function Projects() {
       <SectionWrapper>
         <div className="text-center mb-10 space-y-3">
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-fg">做过的东西</h1>
-          <p className="text-muted-fg text-lg max-w-xl mx-auto">都是真实做过的项目，不是练习。</p>
+          <p className="text-muted-fg text-lg max-w-xl mx-auto">从需求、设计到实现，看看这些项目是怎样做出来的。</p>
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center mb-12">
@@ -36,9 +36,9 @@ export default function Projects() {
         </div>
 
         {filtered.length > 0 ? (
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {filtered.map(p => (
-              <ProjectCard key={p.id} project={p} featured={p.featured} />
+              <ProjectCard key={p.id} project={p} featured={activeTag === 'All' && p.id === 'ai-xiaoshang'} />
             ))}
           </div>
         ) : (

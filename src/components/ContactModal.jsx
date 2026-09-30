@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Mail, Copy, Check, MessageCircle, Video } from 'lucide-react'
-
-const EMAIL = '2186185477@qq.com'
+import { EMAIL } from '../data/contact'
 
 export default function ContactModal({ open, onClose }) {
   const [copied, setCopied] = useState(false)

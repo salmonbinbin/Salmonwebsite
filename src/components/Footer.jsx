@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Hexagon } from 'lucide-react'
+import { EMAIL, GITHUB_URL } from '../data/contact'
 
 export default function Footer() {
   return (
@@ -31,8 +32,8 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-bold mb-4 text-secondary text-sm uppercase tracking-wide">联系</h4>
             <ul className="space-y-2 text-[#94A3B8] text-sm">
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
-              <li><a href="mailto:2186185477@qq.com" className="hover:text-white transition-colors">2186185477@qq.com</a></li>
+              <li><a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
+              <li><a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">{EMAIL}</a></li>
             </ul>
           </div>
         </div>

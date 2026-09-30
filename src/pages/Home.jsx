@@ -9,6 +9,7 @@ import BackgroundDecorations from '../components/BackgroundDecorations'
 import SectionWrapper from '../components/SectionWrapper'
 import timelineData from '../data/timeline.json'
 import projectsData from '../data/projects.json'
+import { EMAIL } from '../data/contact'
 
 const marqueeKeywords = ['React', 'Vue', 'Spring Boot', 'FastAPI', '微信小程序', 'TypeScript', 'AI', '产品', '运营', '内容', 'Tailwind', 'Node.js', 'Python']
 
@@ -37,7 +38,7 @@ const stats = [
   { icon: <Trophy className="w-6 h-6" />, value: '3', label: '比赛获奖', color: 'text-tertiary' },
   { icon: <FolderGit2 className="w-6 h-6" />, value: '4+', label: '完整项目', color: 'text-accent' },
   { icon: <FileText className="w-6 h-6" />, value: '10+', label: '公众号推文', color: 'text-secondary' },
-  { icon: <GraduationCap className="w-6 h-6" />, value: '4', label: '夏校经历', color: 'text-quaternary' },
+  { icon: <GraduationCap className="w-6 h-6" />, value: '4', label: '冬夏令营', color: 'text-quaternary' },
 ]
 
 const shadowColors = ['shadow-card-pink', 'shadow-card-amber', 'shadow-card-emerald']
@@ -84,29 +85,28 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden md:block md:col-span-2">
-            <div className="absolute inset-0 bg-dot-grid opacity-50 -z-10 rotate-3 rounded-2xl" />
-            <div className="bg-card p-4 rounded-3xl border-2 border-fg shadow-card relative z-10" style={{ borderRadius: '24px 24px 24px 0' }}>
-              <div className="bg-muted rounded-2xl p-8 space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-secondary rounded-full border-2 border-fg flex items-center justify-center animate-wiggle">
-                    <Sparkles className="text-white w-6 h-6" />
-                  </div>
-                  <div className="h-3 bg-border rounded-full w-28" />
-                </div>
-                <div className="space-y-2">
-                  <div className="h-2.5 bg-border rounded-full w-full" />
-                  <div className="h-2.5 bg-border rounded-full w-3/4" />
-                  <div className="h-2.5 bg-border rounded-full w-1/2" />
-                </div>
-                <div className="flex gap-3">
-                  <div className="h-9 bg-accent rounded-lg w-20 border-2 border-fg shadow-pop" />
-                  <div className="h-9 bg-quaternary rounded-lg w-20 border-2 border-fg shadow-pop" />
-                </div>
-              </div>
-              <div className="absolute -top-5 -right-5 w-14 h-14 bg-tertiary rounded-full border-2 border-fg flex items-center justify-center shadow-pop">
-                <Star className="text-fg w-5 h-5 fill-fg" />
-              </div>
+          <div className="relative md:col-span-2 w-full max-w-[460px] mx-auto mt-4 md:mt-0" aria-label="Salmon 的个人照片">
+            <div aria-hidden="true" className="absolute -top-7 -left-7 w-28 h-28 rounded-full border-[3px] border-secondary/50" />
+            <div aria-hidden="true" className="absolute -top-3 -right-5 w-20 h-20 rotate-45 border-[3px] border-tertiary/40" />
+            <div aria-hidden="true" className="absolute inset-0 translate-x-4 translate-y-5 rounded-[34px] bg-secondary border-[3px] border-fg" />
+            <div aria-hidden="true" className="absolute inset-0 translate-x-8 translate-y-9 rounded-[34px] bg-accent/15 -z-10" />
+
+            <div className="hero-portrait-frame relative overflow-hidden bg-card p-2.5 sm:p-3 rounded-[34px] border-[3px] border-fg shadow-[8px_8px_0px_0px_var(--color-fg)]">
+              <img
+                src="/images/salmon-portrait.jpg"
+                alt="Salmon 戴着蓝色帽子的自拍照"
+                width="960"
+                height="1280"
+                fetchPriority="high"
+                className="hero-portrait-image block w-full aspect-[4/5] object-cover object-[center_38%] rounded-[23px]"
+              />
+            </div>
+
+            <div className="absolute -top-5 -right-4 sm:-right-7 w-14 h-14 bg-tertiary rounded-full border-2 border-fg flex items-center justify-center shadow-pop rotate-12" aria-hidden="true">
+              <Star className="text-fg w-6 h-6 fill-fg" />
+            </div>
+            <div className="absolute -bottom-7 -left-3 sm:-left-6 bg-card px-4 py-2.5 rounded-full border-2 border-fg shadow-pop -rotate-3 font-heading font-extrabold text-sm sm:text-base text-fg">
+              你好，见个面！ <span aria-hidden="true">✦</span>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function Home() {
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-fg">做过的东西</h2>
           <p className="text-muted-fg text-lg max-w-xl mx-auto">几个拿过奖的项目，还有更多在项目页。</p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {featuredProjects.map(p => (
             <ProjectCard key={p.id} project={p} featured={p.featured} />
           ))}
@@ -189,16 +189,12 @@ export default function Home() {
           <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-fg">聊一聊</h2>
           <p className="text-muted-fg text-lg">在找实习，也欢迎聊聊合作或者有意思的想法。不一定非得是技术岗——运营、产品、内容相关的也可以。</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/about">
-              <Button variant="primary" size="lg">
-                给我发邮件
-              </Button>
-            </Link>
-            <a href="mailto:hello@salmon.dev">
-              <Button variant="secondary" size="lg" className="!bg-fg shadow-[6px_6px_0px_0px_var(--color-secondary)] hover:shadow-[8px_8px_0px_0px_var(--color-secondary)]">
-                hello@salmon.dev
-              </Button>
-            </a>
+            <Button as="a" href={`mailto:${EMAIL}`} variant="primary" size="lg">
+              给我发邮件
+            </Button>
+            <Button as="a" href={`mailto:${EMAIL}`} variant="secondary" size="lg" className="!bg-fg shadow-[6px_6px_0px_0px_var(--color-secondary)] hover:shadow-[8px_8px_0px_0px_var(--color-secondary)]">
+              {EMAIL}
+            </Button>
           </div>
         </div>
       </SectionWrapper>

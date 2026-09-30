@@ -13,15 +13,15 @@ const sizes = {
   lg: 'px-8 py-4 text-lg',
 }
 
-const Button = forwardRef(({ variant = 'primary', size = 'md', className = '', children, ...props }, ref) => {
+const Button = forwardRef(({ as: Component = 'button', variant = 'primary', size = 'md', className = '', children, ...props }, ref) => {
   return (
-    <button
+    <Component
       ref={ref}
       className={`inline-flex items-center justify-center gap-2 rounded-full border-2 border-fg font-bold tracking-wide transition-all duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   )
 })
 
